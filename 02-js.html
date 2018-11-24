@@ -6,10 +6,12 @@
     <script type="text/babel">
         const rootElement = document.getElementById("root");
 
-        const content = 'Hello World';
-        const myClassName = "container";
-        const element = <div className={myClassName + '__hi-there'}>{(() => content))()}</div>
-
+        const props = {
+            className: 'container',
+            children: 'Helloo World'
+        }
+        
+        const element = <div {...props} className = "my-class" />
         ReactDOM.render(element, rootElement);
     </script>
 </div>
